@@ -10,6 +10,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+// Models
+const User = require('./models/User');
+const Post = require('./models/Post');
+const Comment = require('./models/Comment');
+
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://kasher11yezdany:nvE0d6cO6zk3cC5o@cluster0.qppml7f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
